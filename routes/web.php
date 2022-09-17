@@ -20,14 +20,19 @@ use App\Http\Controllers\image_c;
 //     return view('welcome');
 // });
 
-Route::get('/', [Index_c::class, 'index']);
-Route::get('/read', [Index_c::class, 'allData']);
-Route::post('/create', [Index_c::class, 'createData']);
-Route::get('/find/{id}', [Index_c::class, 'findData']);
-Route::post('/update/{id}', [Index_c::class, 'updateData']);
-Route::get('/delete/{id}', [Index_c::class, 'deleteData']);
+// Route::get('/', [Index_c::class, 'index']);
+// Route::get('/read', [Index_c::class, 'allData']);
+// Route::post('/create', [Index_c::class, 'createData']);
+// Route::get('/find/{id}', [Index_c::class, 'findData']);
+// Route::post('/update/{id}', [Index_c::class, 'updateData']);
+// Route::get('/delete/{id}', [Index_c::class, 'deleteData']);
 
 //image upload and show pr
-// Route::get('/image-form', [image_c::class, 'index_image']);
-// Route::post('/create', [image_c::class, 'store']);
-// Route::get('/image-show', [image_c::class, 'image_show']);
+Route::get('/image-form', [image_c::class, 'index_image']);
+Route::post('/create', [image_c::class, 'store']);
+Route::get('/image-show', [image_c::class, 'image_show']);
+
+
+//*******_____Api TEST_____*****/
+Route::get('/api-test', [image_c::class, 'Api']);
+

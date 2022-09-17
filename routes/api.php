@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\image_c;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//*******_____Api TEST_____*****/
+Route::get('/api-test/{name?}', [image_c::class, 'Api']);
+Route::post('/api-test/add', [image_c::class, 'ApiStore']);
