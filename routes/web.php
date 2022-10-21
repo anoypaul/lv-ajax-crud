@@ -27,10 +27,22 @@ use App\Http\Controllers\image_c;
 // Route::post('/update/{id}', [Index_c::class, 'updateData']);
 // Route::get('/delete/{id}', [Index_c::class, 'deleteData']);
 
+// test aj --abar ajax practices start 
+Route::get('/', [image_c::class, 'index']);
+Route::get('/read', [image_c::class, 'allData']);
+Route::post('/create', [image_c::class, 'createData']);
+Route::get('/find/{id}', [image_c::class, 'findData']);
+Route::post('/update/{id}', [image_c::class, 'updateData']);
+Route::get('/delete/{id}', [image_c::class, 'deleteDate']);
+
+
+// test aj --abar ajax practices start 
+
+
 //image upload and show pr
-Route::get('/image-form', [image_c::class, 'index_image']);
-Route::post('/create', [image_c::class, 'store']);
-Route::get('/image-show', [image_c::class, 'image_show']);
+// Route::get('/image-form', [image_c::class, 'index_image']);
+// Route::post('/create', [image_c::class, 'store']);
+// Route::get('/image-show', [image_c::class, 'image_show']);
 
 
 //*******_____Api TEST_____*****/
